@@ -1,0 +1,84 @@
+<!-- Directives -->
+<input type="checkbox" name="" id="" [(ngModel)]="isVisible">
+{{isVisible}}
+<div *ngIf="isVisible;else template">
+  <div class="bg-success">
+    <p> {{ title}} </p>
+  </div>
+</div>
+
+<ng-template #template>
+  <div class="bg-primary">
+    {{ title}} değil
+  </div>
+</ng-template>
+
+<!-- <div [ngSwitch]="isVisible">
+  <h1 *ngSwitchCase="1">Angular</h1>
+  <h3 *ngSwitchCase="0">Blazor</h3>
+</div> -->
+
+<!-- <div *ngFor="let item of items" ngClass="bg-warning">
+  <p>
+    {{item.id}} - {{item.description}}
+  </p>
+</div> -->
+
+<!-- <div *ngFor="let item of items" [ngClass]="isVisible ? 'bg-success' : 'bg-danger'">
+  <p>
+    {{item.id}} - {{item.description}}
+  </p>
+</div> -->
+
+<!-- <div *ngFor="let item of items" [ngClass]="{'bg-success': isVisible, 'bg-danger': !isVisible}">
+  <p>
+    {{item.id}} - {{item.description}}
+  </p>
+</div> -->
+
+<!-- <div [ngStyle]="{'background-color': isVisible ? 'yellow' : 'red'}">
+aaa
+</div> -->
+<!-- 
+    *ngIf="expression"
+    <div [ngSwitch]="conditionExpression">
+      <div *ngSwitchCase="expression">output</div>
+      <div *ngSwitchDefault>output2</div>
+    </div>
+    *ngFor="let item of list"
+    [ngClass]="{cssClass: expression}"
+    [ngStyle]="{style: expression}"
+-->
+<div class="container">
+  <div class="row">
+    <div class="col-5 mx-auto">
+      <div>
+        <input type="checkbox" name="" id=""  [(ngModel)]="binding" (change)="techCareer()">
+        {{text}}
+        <button (click)="saveList()">Save</button>
+      </div>
+      <div>
+        <ol class="list-group" *ngFor="let list of lists">
+          <li class="list-group-item d-flex justify-content-between align-items-start">
+            <div class="ms-2 me-auto">
+              <div class="fw-bold">
+                {{list.title}}
+              </div>
+              {{list.description}}
+            </div>
+            <span class="badge bg-primary rounded-pill">
+              {{list.count}}
+            </span>
+          </li>
+          <!-- <li class="list-group-item d-flex justify-content-between align-items-start">
+            <div class="ms-2 me-auto">
+              <div class="fw-bold">Subheading</div>
+              Content for list item
+            </div>
+            <span class="badge bg-primary rounded-pill">14</span>
+          </li> -->
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>

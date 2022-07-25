@@ -1,16 +1,38 @@
 <div class="container">
   <div class="row">
+    <div class="col-5 mx-auto">
+      <div class="form-check d-flex justify-content-end">
+        <label class="form-check-label me-1" for="inputVisible">Visible</label>
+        <input type="checkbox" name="" id="" [(ngModel)]="inputVisible" (click)="getInputNgModel(inputVisible)">
+        <input type="text" name="" id="" [(ngModel)]="inputValue" (keyup.enter)="getInputNgModell(inputValue)">
+      </div>
+      {{inputVisible}} - {{inputValue}}
+      <div class="form-check d-flex justify-content-end">
+        <label class="form-check-label me-1" for="inputVisible">Visible</label>
+        <input type="checkbox" name="" id="" #inputV (click)="getInputV(inputV.value)">
+        <input type="text" name="" id="" #inputVl (keyup.enter)="getInputVl(inputVl.value)">
+      </div>
+      {{inputV.value}}
+    </div>
+  </div>
+  <div class="row">
     <div class="col-7 mx-auto">
       <h3 class="bg-success text-white p-3">
         {{ getName() }}
       </h3>
       <div class="input-group mb-3">
-        <input type="text" class="form-control" 
+        <input type="text" class="form-control is-invalid" 
         [(ngModel)]="message"
-        #item (keyup.enter)="addTodo(item.value); item.value = ''"
+        #item (keyup.enter)="addTodo(item.value); item.value=''"
           (click)="clickInput()" (focus)="focusEvent()" [ngStyle]="{'background-color': itemText}">
         <!-- (blur)="addTodo(item.value); item.value = ''" -->
         <button class="btn btn-outline-success" (click)="addTodo(message); item.value = ''">Ekle</button>
+      </div>
+      <div [ngClass]="{'': !message, 'invalid-feedback': message}">
+        Please choose a username.
+      </div>
+      <div *ngIf="!message" class="bg-warning">
+        Please choose a username.
       </div>
       {{message}}
       <div class="form-check d-flex justify-content-end">

@@ -9,7 +9,6 @@ export class Todo {
         this.status = status;
     }
 }
-
 export class TodoItemProperty {
     description: string;
     status: string;

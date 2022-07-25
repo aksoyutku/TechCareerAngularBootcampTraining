@@ -14,13 +14,14 @@ export class AppComponent {
   displayAll: boolean = true;
   itemText: string = "red";
   message: string;
+  cssValue: string;
   getName() { return this.model.name; }
   getItems() { return this.model.items; }
   getTodoItems() {
     if (this.displayAll) {
       return this.model.todoItems;
     }
-    return this.model.todoItems.filter(x => !x.status)
+    return this.model.todoItems.filter((x:ITodoItem) => !x.status)
   }
   addItem(item: any) { return this.model.items.push(item); }
   addTodo(item: string) {
@@ -59,4 +60,24 @@ export class AppComponent {
   //   this.items.push(item);
   //   console.log(item + " eklendi");
   // }
+
+  inputVisible: any;
+  inputValue: string;
+  getInputNgModel(inputVisible: any) {
+    console.log(inputVisible);
+  }
+  getInputNgModell(inputValue: string) {
+    console.log(inputValue);
+  }
+  inputV: any;
+  inputVl: string;
+  getInputV(inputV: any) {
+    console.log(inputV);
+  }
+  getInputVl(inputVl: string) {
+    if(inputVl == '') {
+      alert("boş");
+    }
+    console.log(inputVl);
+  }
 }
