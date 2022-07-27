@@ -1,0 +1,45 @@
+<div class="container">
+    <div class="row">
+        <div class="col-7 mx-auto">
+            <h3 class="bg-success text-white p-3">
+                {{ getTodoName() }} Listesi
+            </h3>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" [(ngModel)]="inputText" (keyup.enter)="addItem();" >
+                <button class="btn" [class]="getBtnClasses()" (click)="addItem();">Add</button>
+            </div>
+            <div class="col-12 form-check d-flex justify-content-end">
+                <label class="form-check-label" style="margin-right: 5px; margin-top: 2px;" id="displayAll">Hepsini Göster</label>
+                <input type="checkbox" [(ngModel)]='displayyAll' for="displayAll" />
+            </div>
+            <!-- <div class="mb-2"> {{getCount()}} görev tamamlandı. </div> -->
+            <div class="alert alert-warning" *ngIf="getTodoItems().length == 0 else itemsTemplate">
+                Tüm görevler tamamlandı.
+            </div>
+            <ng-template #itemsTemplate>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Description</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let item of getTodoItems(); let i = index"
+                            [class]="{'bg-primary': item.action, 'bg-danger': !item.action}">
+                            <td>{{i+1}}</td>
+                            <td>{{item.description}}</td>
+                            <td [ngStyle]="{'background-color': !item.action ? 'red' : 'green'}">
+                                {{item.action}}
+                            </td>
+                            <td><input type="checkbox" 
+                                (change)="onActionChanged(item)" 
+                                [(ngModel)]="item.action" name="" id=""></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </ng-template>
+        </div>
+    </div>
+</div>
