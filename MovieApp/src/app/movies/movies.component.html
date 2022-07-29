@@ -2,7 +2,7 @@
     <movie></movie>
 </div> -->
 
-<div>
+<!-- <div>
     <h1> {{title}} </h1>
 </div>
 
@@ -10,4 +10,117 @@
     <li *ngFor="let item of movies">
         {{item.title}}
     </li>
-</ul>
+</ul> -->
+<h1>{{title}}</h1>
+<!-- <div class="alert alert-warning" *ngIf="movies.length == 15">
+    {{movies.length}} film bulundu.
+</div> -->
+<!-- <div [ngSwitch]="movies.length">
+    <div *ngSwitchCase="0" class="alert alert-danger">Film bulunamadı.</div>
+    <div *ngSwitchDefault class="alert alert-success">{{movies.length}} film bulundu.</div>
+</div> -->
+<!-- <div class="alert " [ngClass]="{'alert-success': movies.length > 0, 'alert-danger': movies.length == 0}">
+    {{movies.length}} 
+</div> -->
+<div *ngIf="movies.length > 0;else templateName">
+    <div class="alert alert-success">{{movies.length}} film bulundu.</div>
+    <div class="mb-3">
+        <input type="text" name="" id="" class="form-control" placeholder="Arama Yapınız..." [(ngModel)]="filterText">
+        <span class="text-muted" *ngIf="filterText"> Aradığınız kelime : {{filterText}}</span>
+    </div>
+    <!-- <ng-template [ngTemplateOutlet]="movieList"></ng-template> -->
+    <ng-template [ngTemplateOutlet]="movieList2" [ngTemplateOutletContext]="{teachCareer: popularMovies}">
+    </ng-template>
+</div>
+<ng-template #templateName>
+    <div class="alert alert-danger">Film bulunamadı.</div>
+</ng-template>
+<div class="row">
+    <div class="col-6" *ngFor="let item of movies">
+        <div class="card mb-3">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="/assets/img/{{item.imageUrl}}" class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">{{item.title}}</h5>
+                        <p class="card-text">{{item.description | summary : 10}}</p>
+                        <p class="card-text"><small class="text-muted">{{item.datePuslished}}</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- <ng-template #movieList>
+    <div class="row">
+        <div class="col-6" *ngFor="let item of movies">
+            <div class="card mb-3">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="/assets/img/{{item.imageUrl}}" class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">{{item.title}}</h5>
+                            <p class="card-text">{{item.description}}</p>
+                            <p class="card-text"><small class="text-muted">{{item.datePuslished}}</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-template> -->
+
+<ng-template #movieList2 let-ders6="teachCareer">
+    <h2>Popular Movies</h2>
+    <div class="row row-cols-1 row-cols-md-3 g-4 mb-3">
+        <!-- <div class="col-6" *ngFor="let item of movies"> -->
+        <div class="col" *ngFor="let item of ders6">
+            <div class="card h-100">
+                <img src="/assets/img/{{ item.imageUrl }}" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">{{ item.title }}</h5>
+                    <p class="card-text">{{ item.description | summary : 10 }}</p>
+                    <p class="card-text">{{ item.datePulished }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-template>
+
+<h1>Lower-Upper-Title Pipe</h1>
+<p>{{'teachcareer' }}</p>
+<p>{{'teachcareer' | uppercase}} => TEACHCAREER</p>
+<p>{{'TEACHCAREER' | lowercase}} => teachcareer</p>
+<p>{{'teachcareer' | titlecase}} => Teachcareer</p>
+
+<h1>Date Pipe</h1>
+<p> {{today}} </p>
+<p> {{today | date }} </p>
+<p> {{today | date: 'short'}} </p>
+<p> {{today | date: 'full'}} </p>
+<p> {{today | date: 'shortDate'}} </p>
+<p> {{today | date: 'medium'}} </p>
+
+<h1>Decimal Pipe</h1>
+<p> {{2.23456343}} </p>
+<p> {{2.23456343 | number}} </p>
+<p> {{2.23456343 | number: '2.0-3'}} </p>
+
+<h1>Percent Pipe</h1>
+<p>{{ 0.259 }}</p>
+<p>{{ 0.259 | percent}}</p>
+<p>{{ 0.259 | percent: '2.2-4'}}</p>
+
+<h1>Custom Pipe</h1>
+<p> {{value.length}}  - {{ value  | summary }} </p>
+<p> {{value1.length}} - {{ value1 | summary }} </p>
+<p> {{value2.length}} - {{ value2 | summary }} </p>
+
+<p> {{value.length}}  - {{ value  | summary : 1 }} </p>
+<p> {{value1.length}} - {{ value1 | summary : 5}} </p>
+<p> {{value2.length}} - {{ value2 | summary : 15}} </p>

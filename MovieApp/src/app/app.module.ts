@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -8,6 +9,7 @@ import { MoviesComponent } from './movies/movies.component';
 import { MovieComponent } from './movies/movie/movie.component';
 import { MovieDetailsComponent } from './movies/movie/movie-details/movie-details.component';
 import { FooterComponent } from './footer/footer.component';
+import { SummaryPipe } from './pipes/summary.pipe';
 
 @NgModule({
   declarations: [ /* components */
@@ -18,9 +20,11 @@ import { FooterComponent } from './footer/footer.component';
     MovieComponent,
     MovieDetailsComponent,
     FooterComponent,
+    SummaryPipe,
   ],
   imports: [ /* modules */
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [], /* services */
   bootstrap: [AppComponent]

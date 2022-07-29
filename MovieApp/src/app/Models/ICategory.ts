@@ -17,10 +17,5 @@ export class CategoryConst {
     this.name = _name;
   }
 }
-export class CategoryC {
-  constructor(public id: number, public name: string) {
-    this.id = id;
-    this.name= name;
-  }
-}
+
 */
