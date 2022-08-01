@@ -10,6 +10,7 @@ import { MovieComponent } from './movies/movie/movie.component';
 import { MovieDetailsComponent } from './movies/movie/movie-details/movie-details.component';
 import { FooterComponent } from './footer/footer.component';
 import { SummaryPipe } from './pipes/summary.pipe';
+import { MovieFilterPipe } from './pipes/movie-filter.pipe';
 
 @NgModule({
   declarations: [ /* components */
@@ -21,6 +22,7 @@ import { SummaryPipe } from './pipes/summary.pipe';
     MovieDetailsComponent,
     FooterComponent,
     SummaryPipe,
+    MovieFilterPipe,
   ],
   imports: [ /* modules */
     BrowserModule,

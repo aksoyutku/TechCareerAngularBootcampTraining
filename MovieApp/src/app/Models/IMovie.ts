@@ -5,5 +5,5 @@ export interface IMovie {
     imageUrl: string;
     isPopular: boolean;
     categoryId: number;
-    datePuslished: Date;
+    datePublished: Date;
 }
