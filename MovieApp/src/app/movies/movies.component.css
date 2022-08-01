@@ -1,0 +1,59 @@
+/* .card {
+    min-height: 200px;
+    margin-top: 50%;
+    margin-bottom: 50%;
+    border: none;
+}
+
+#sucsess {
+    border: 2px solid green
+}
+
+#info {
+    border: 2px solid #17a2b8
+}
+
+#warning {
+    border: 2px solid orange
+}
+
+#error {
+    border: 2px solid red
+}
+
+button {
+    background: none;
+    color: #222;
+}
+
+#sucsess-button {
+    border: 2px solid green !important
+}
+
+#sucsess-button:hover {
+    background: green !important
+}
+
+#info-button {
+    border: 2px solid #17a2b8 !important
+}
+
+#info-button:hover {
+    background: #17a2b8 !important
+}
+
+#warning-button {
+    border: 2px solid orange !important
+}
+
+#warning-button:hover {
+    background: orange !important
+}
+
+#error-button {
+    border: 2px solid red !important
+}
+
+#error-button:hover {
+    background: red !important
+} */

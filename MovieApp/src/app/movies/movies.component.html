@@ -25,10 +25,8 @@
 <div *ngIf="movies.length > 0;else templateName">
     <div class="alert alert-success">{{filterMovies.length}} film bulundu.</div>
     <div class="mb-3">
-        <input type="text" name="" id="" class="form-control" 
-               placeholder="Arama Yapınız..." 
-               [(ngModel)]="filterText"
-               (ngModelChange)="onInputChange()">
+        <input type="text" name="" id="" class="form-control" placeholder="Arama Yapınız..." [(ngModel)]="filterText"
+            (ngModelChange)="onInputChange()">
         <span class="text-muted" *ngIf="filterText"> Aradığınız kelime : {{filterText}}</span>
     </div>
     <!-- <ng-template [ngTemplateOutlet]="movieList"></ng-template> -->
@@ -38,8 +36,8 @@
 <ng-template #templateName>
     <div class="alert alert-danger">Film bulunamadı.</div>
 </ng-template>
+<!-- <div class="col-6" *ngFor="let item of movies | movieFilter : filterText"> -->
 <div class="row">
-    <!-- <div class="col-6" *ngFor="let item of movies | movieFilter : filterText"> -->
     <div class="col-6" *ngFor="let item of filterMovies">
         <div class="card mb-3">
             <div class="row g-0">
@@ -53,7 +51,8 @@
                         <p class="card-text"><small class="text-muted">{{item.datePublished | date}}</small></p>
                         <div>
                             <button class="btn btn-sm btn-outline-success me-2">Detaylar</button>
-                            <button class="btn btn-sm btn-success" (click)="addToList($event, item)">Listeye Ekle</button>
+                            <button class="btn btn-sm btn-success" (click)="addToList($event, item)">Listeye
+                                Ekle</button>
                         </div>
                     </div>
                 </div>
@@ -61,6 +60,22 @@
         </div>
     </div>
 </div>
+
+<!-- <div class="container text-center">
+    <div class="row">
+        <div class="col-3" *ngFor="let item of toastrNames">
+            <div id="{{item.cardId}}" class="card">
+                <div class="card-body">
+                    <h3 class="card-text"> {{item.name}} </h3>
+                    <button id="{{item.buttonId}}" 
+                            class="btn btn-success mt-5" 
+                            type="button"
+                            (click)="showToastr(item.name)"> {{item.buttonDesc}} </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
 
 <!-- <ng-template #movieList>
     <div class="row">
