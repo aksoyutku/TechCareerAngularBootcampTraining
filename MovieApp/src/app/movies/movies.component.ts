@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
 import { IMovie } from '../Models/IMovie';
@@ -10,10 +11,10 @@ import { ToastrNameService } from '../toastr/datas/mock-datas.service';
   templateUrl: './movies.component.html',
   styleUrls: ['./movies.component.css']
 })
-export class MoviesComponent {
+export class MoviesComponent implements OnInit {
   /*movies = ["film 1", "film 2", "film 3"] */
   title = "Film Listesi";
-  movies: IMovie[];
+  movies: IMovie[] = [];
   popularMovies: IMovie[];
   movieRepository: MovieRepository;
   today = new Date();
@@ -31,12 +32,19 @@ export class MoviesComponent {
 
   constructor(private toastrName: ToastrNameService,
     private toastr: ToasterServiceMethods,
-    private toastrService: ToastrService) {
+    private toastrService: ToastrService,
+    private http: HttpClient) {
     this.movieRepository = new MovieRepository();
-    this.movies = this.movieRepository.getMovies();
-    this.popularMovies = this.movieRepository.getPopularMovies();
-    this.filterMovies = this.movies;
+    /* this.movies = this.movieRepository.getMovies(); */
+    /* this.popularMovies = this.movieRepository.getPopularMovies(); */
+    /* this.filterMovies = this.movies; */
     this.toastrNames = this.toastrName.getToastrNames();
+  }
+
+  ngOnInit(): void {
+    this.http.get<IMovie[]>("http://localhost:3000/movies").subscribe(data => {
+      this.movies = data;
+    })
   }
 
   showToastr(toasterInfo: string) {

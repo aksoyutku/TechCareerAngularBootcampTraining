@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
+import { ToastrModule } from 'ngx-toastr';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -12,9 +14,9 @@ import { MovieDetailsComponent } from './movies/movie/movie-details/movie-detail
 import { FooterComponent } from './footer/footer.component';
 import { SummaryPipe } from './pipes/summary.pipe';
 import { MovieFilterPipe } from './pipes/movie-filter.pipe';
-import { ToastrModule } from 'ngx-toastr';
 import { ToastrNameService } from './toastr/datas/mock-datas.service';
 import { ToasterServiceMethods } from './services/toastr.service';
+import { CommentsComponent } from './comments/comments.component';
 
 @NgModule({
   declarations: [ /* components */
@@ -27,12 +29,16 @@ import { ToasterServiceMethods } from './services/toastr.service';
     FooterComponent,
     SummaryPipe,
     MovieFilterPipe,
+    CommentsComponent,
   ],
   imports: [ /* modules */
     BrowserModule,
-    BrowserAnimationsModule,
     FormsModule,
-    ToastrModule.forRoot()
+    /* Toastr Begin */
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
+    /* Toastr End */
+    HttpClientModule 
   ],
   providers: [ToastrNameService, ToasterServiceMethods], /* services */
   bootstrap: [AppComponent]

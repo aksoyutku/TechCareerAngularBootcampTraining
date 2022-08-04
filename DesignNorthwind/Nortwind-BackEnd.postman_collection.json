@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "d14485c0-84cf-4fd1-9343-b9a3194e108b",
+		"_postman_id": "5b3cc2d3-e982-474c-b191-fb6a637cc2bb",
 		"name": "Nortwind-BackEnd",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
 		"_exporter_id": "4741071"
@@ -73,7 +73,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "http://localhost:3030/api/products/7"
+						"url": "http://localhost:3030/api/products/8"
 					},
 					"response": []
 				},
@@ -82,7 +82,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "http://localhost:3030/api/products/delayed/7"
+						"url": "http://localhost:3030/api/products/delayed/8"
 					},
 					"response": []
 				},
@@ -93,7 +93,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Kayısı\",\r\n    \"price\": 20,\r\n    \"stock\": 500,\r\n    \"imageName\": \"3.jpg\"\r\n}",
+							"raw": "{\r\n    \"name\": \"Çamaşır Makinesi\",\r\n    \"price\": 5000,\r\n    \"stock\": 100,\r\n    \"imageName\": \"10.jpg\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -111,14 +111,14 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Kayısııııı\",\r\n    \"price\": 20,\r\n    \"stock\": 500,\r\n    \"imageName\": \"3.jpg\"\r\n}",
+							"raw": "{\r\n    \"name\": \"Çamaşır Makinesi\",\r\n    \"price\": 5000,\r\n    \"stock\": 100,\r\n    \"imageName\": \"3.jpg\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": "http://localhost:3030/api/products/78"
+						"url": "http://localhost:3030/api/products/79"
 					},
 					"response": []
 				},
@@ -127,7 +127,7 @@
 					"request": {
 						"method": "DELETE",
 						"header": [],
-						"url": "http://localhost:3030/api/products/7"
+						"url": "http://localhost:3030/api/products/79"
 					},
 					"response": []
 				},
@@ -136,7 +136,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "http://localhost:3030/api/products/images/3.jpg"
+						"url": "http://localhost:3030/api/products/images/77.jpg"
 					},
 					"response": []
 				}
@@ -148,14 +148,14 @@
 				{
 					"name": "get all categories",
 					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": {
-								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoyLCJmaXJzdE5hbWUiOiJLYW1pbCIsImxhc3ROYW1lIjoiS2FwbGFuIiwidXNlcm5hbWUiOiJra2FwbGFuIn0sImlhdCI6MTY1OTUxNDI0MCwiZXhwIjoxNjU5NTMyMjQwfQ.pagimdMpjg9rhLsfWl_3n2u8YFkkAZc-ku4dmjiPe9Y"
-							}
-						},
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoyLCJmaXJzdE5hbWUiOiJLYW1pbCIsImxhc3ROYW1lIjoiS2FwbGFuIiwidXNlcm5hbWUiOiJra2FwbGFuIn0sImlhdCI6MTY1OTY0MTYxNCwiZXhwIjoxNjU5NjU5NjE0fQ.kdEaDWat4boHrhRKZqplhEzSNReUwq49Kn6Ks2WYJIE",
+								"type": "text"
+							}
+						],
 						"url": "http://localhost:3030/api/categories"
 					},
 					"response": []
@@ -163,29 +163,29 @@
 				{
 					"name": "get category #7",
 					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": {
-								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoyLCJmaXJzdE5hbWUiOiJLYW1pbCIsImxhc3ROYW1lIjoiS2FwbGFuIiwidXNlcm5hbWUiOiJra2FwbGFuIn0sImlhdCI6MTY1OTUxNDI0MCwiZXhwIjoxNjU5NTMyMjQwfQ.pagimdMpjg9rhLsfWl_3n2u8YFkkAZc-ku4dmjiPe9Y"
-							}
-						},
 						"method": "GET",
-						"header": [],
-						"url": "http://localhost:3030/api/categories/7"
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoyLCJmaXJzdE5hbWUiOiJLYW1pbCIsImxhc3ROYW1lIjoiS2FwbGFuIiwidXNlcm5hbWUiOiJra2FwbGFuIn0sImlhdCI6MTY1OTY0MTYxNCwiZXhwIjoxNjU5NjU5NjE0fQ.kdEaDWat4boHrhRKZqplhEzSNReUwq49Kn6Ks2WYJIE",
+								"type": "text"
+							}
+						],
+						"url": "http://localhost:3030/api/categories/8"
 					},
 					"response": []
 				},
 				{
 					"name": "add a new category",
 					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": {
-								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoyLCJmaXJzdE5hbWUiOiJLYW1pbCIsImxhc3ROYW1lIjoiS2FwbGFuIiwidXNlcm5hbWUiOiJra2FwbGFuIn0sImlhdCI6MTY1OTUxNDI0MCwiZXhwIjoxNjU5NTMyMjQwfQ.pagimdMpjg9rhLsfWl_3n2u8YFkkAZc-ku4dmjiPe9Y"
-							}
-						},
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoyLCJmaXJzdE5hbWUiOiJLYW1pbCIsImxhc3ROYW1lIjoiS2FwbGFuIiwidXNlcm5hbWUiOiJra2FwbGFuIn0sImlhdCI6MTY1OTY0MTYxNCwiZXhwIjoxNjU5NjU5NjE0fQ.kdEaDWat4boHrhRKZqplhEzSNReUwq49Kn6Ks2WYJIE",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n    \"name\": \"category\",\r\n    \"description\": \"category description\"\r\n}",
@@ -202,14 +202,14 @@
 				{
 					"name": "update category #7",
 					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": {
-								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoyLCJmaXJzdE5hbWUiOiJLYW1pbCIsImxhc3ROYW1lIjoiS2FwbGFuIiwidXNlcm5hbWUiOiJra2FwbGFuIn0sImlhdCI6MTY1OTUxNDI0MCwiZXhwIjoxNjU5NTMyMjQwfQ.pagimdMpjg9rhLsfWl_3n2u8YFkkAZc-ku4dmjiPe9Y"
-							}
-						},
 						"method": "PUT",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoyLCJmaXJzdE5hbWUiOiJLYW1pbCIsImxhc3ROYW1lIjoiS2FwbGFuIiwidXNlcm5hbWUiOiJra2FwbGFuIn0sImlhdCI6MTY1OTY0MTYxNCwiZXhwIjoxNjU5NjU5NjE0fQ.kdEaDWat4boHrhRKZqplhEzSNReUwq49Kn6Ks2WYJIE",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n    \"name\": \"Produce 7\",\r\n    \"description\": \"Dried fruit and bean curd 7\",\r\n    \"imageName\": \"7.jpg\"\r\n}",
@@ -219,37 +219,37 @@
 								}
 							}
 						},
-						"url": "http://localhost:3030/api/categories/7"
+						"url": "http://localhost:3030/api/categories/8"
 					},
 					"response": []
 				},
 				{
 					"name": "delete category #7",
 					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": {
-								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoyLCJmaXJzdE5hbWUiOiJLYW1pbCIsImxhc3ROYW1lIjoiS2FwbGFuIiwidXNlcm5hbWUiOiJra2FwbGFuIn0sImlhdCI6MTY1OTUxNDI0MCwiZXhwIjoxNjU5NTMyMjQwfQ.pagimdMpjg9rhLsfWl_3n2u8YFkkAZc-ku4dmjiPe9Y"
-							}
-						},
 						"method": "DELETE",
-						"header": [],
-						"url": "http://localhost:3030/api/categories/7"
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoyLCJmaXJzdE5hbWUiOiJLYW1pbCIsImxhc3ROYW1lIjoiS2FwbGFuIiwidXNlcm5hbWUiOiJra2FwbGFuIn0sImlhdCI6MTY1OTY0MTYxNCwiZXhwIjoxNjU5NjU5NjE0fQ.kdEaDWat4boHrhRKZqplhEzSNReUwq49Kn6Ks2WYJIE",
+								"type": "text"
+							}
+						],
+						"url": "http://localhost:3030/api/categories/8"
 					},
 					"response": []
 				},
 				{
 					"name": "get category #1's image",
 					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": {
-								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoyLCJmaXJzdE5hbWUiOiJLYW1pbCIsImxhc3ROYW1lIjoiS2FwbGFuIiwidXNlcm5hbWUiOiJra2FwbGFuIn0sImlhdCI6MTY1OTUxNDI0MCwiZXhwIjoxNjU5NTMyMjQwfQ.pagimdMpjg9rhLsfWl_3n2u8YFkkAZc-ku4dmjiPe9Y"
-							}
-						},
 						"method": "GET",
-						"header": [],
-						"url": "http://localhost:3030/api/categories/images/1.jpg"
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoyLCJmaXJzdE5hbWUiOiJLYW1pbCIsImxhc3ROYW1lIjoiS2FwbGFuIiwidXNlcm5hbWUiOiJra2FwbGFuIn0sImlhdCI6MTY1OTY0MTYxNCwiZXhwIjoxNjU5NjU5NjE0fQ.kdEaDWat4boHrhRKZqplhEzSNReUwq49Kn6Ks2WYJIE",
+								"type": "text"
+							}
+						],
+						"url": "http://localhost:3030/api/categories/images/7.jpg"
 					},
 					"response": []
 				}
@@ -272,7 +272,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "http://localhost:3030/api/employees/7"
+						"url": "http://localhost:3030/api/employees/8"
 					},
 					"response": []
 				},
@@ -351,7 +351,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"İlyas Burak\",\r\n    \"phone\": \"0521234567\",\r\n    \"email\": \"ilyasbural@gmail.com\",\r\n    \"message\": \"REST API!\"\r\n}",
+							"raw": "{\r\n    \"name\": \"Kamil KAPLAN\",\r\n    \"phone\": \"90123456789\",\r\n    \"email\": \"kamilkaplnn@gmail.com\",\r\n    \"message\": \"Blazor\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"

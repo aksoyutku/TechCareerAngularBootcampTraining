@@ -23,7 +23,8 @@
     {{movies.length}} 
 </div> -->
 <div *ngIf="movies.length > 0;else templateName">
-    <div class="alert alert-success">{{filterMovies.length}} film bulundu.</div>
+    <!-- <div class="alert alert-success">{{filterMovies.length}} film bulundu.</div> -->
+    <div class="alert alert-success">{{movies.length}} film bulundu.</div>
     <div class="mb-3">
         <input type="text" name="" id="" class="form-control" placeholder="Arama Yapınız..." [(ngModel)]="filterText"
             (ngModelChange)="onInputChange()">
@@ -37,8 +38,9 @@
     <div class="alert alert-danger">Film bulunamadı.</div>
 </ng-template>
 <!-- <div class="col-6" *ngFor="let item of movies | movieFilter : filterText"> -->
-<div class="row">
-    <div class="col-6" *ngFor="let item of filterMovies">
+    <!-- <div class="col-6" *ngFor="let item of filterMovies"> -->
+<div class="row">    
+    <div class="col-6" *ngFor="let item of movies">
         <div class="card mb-3">
             <div class="row g-0">
                 <div class="col-md-4">
@@ -47,7 +49,7 @@
                 <div class="col-md-8">
                     <div class="card-body">
                         <h5 class="card-title">{{item.title}}</h5>
-                        <p class="card-text">{{item.description | summary}}</p>
+                        <p class="card-text">{{item.description | summary}} - {{item.datePublished}} </p>
                         <p class="card-text"><small class="text-muted">{{item.datePublished | date}}</small></p>
                         <div>
                             <button class="btn btn-sm btn-outline-success me-2">Detaylar</button>

@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { CategoryRepository } from '../Models/CategoryRepository';
 import { ICategory } from '../Models/ICategory';
@@ -10,20 +11,24 @@ import { ICategory } from '../Models/ICategory';
 export class CategoryComponent implements OnInit {
 
   /*categories: string[] = ["Macera", "Romanik", "Bilim Kurgu", "Komedi"];*/
-  categories: ICategory[];
+  categories: ICategory[] = [];
   categoryRepository: CategoryRepository;
   selectedCategory: ICategory = null;
   displayAll = true;
 
-  constructor() {
+  constructor(private http: HttpClient) {
     this.categoryRepository = new CategoryRepository();
-    this.categories = this.categoryRepository.getCategories();
+    // this.categories = this.categoryRepository.getCategories();
   }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {
+    this.http.get<ICategory[]>("http://localhost:3000/categories").subscribe(data => {
+      this.categories = data;
+    });
+  }
 
   selectCategory(category?: ICategory) {
-    if(category) {
+    if (category) {
       this.selectedCategory = category;
       this.displayAll = false;
     } else {

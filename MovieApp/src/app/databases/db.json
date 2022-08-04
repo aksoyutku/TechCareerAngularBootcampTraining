@@ -1,0 +1,69 @@
+{
+    "movies": [
+        {
+            "id": 1,
+            "title": "1. Film",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae aliquam inventore neque. Delectus nam magni, fuga iste quo ipsam. Accusantium impedit eos at fuga quaerat quasi cum esse sit blanditiis.",
+            "imageUrl": "1.jpg",
+            "isPopular": 0
+        },
+        {
+            "id": 2,
+            "title": "2. Film",
+            "description": "fuga quaerat quasi cum esse sit blanditiis.",
+            "imageUrl": "2.jpg",
+            "isPopular": 1
+        },
+        {
+            "id": 3,
+            "title": "3. Film",
+            "description": "Molestiae aliquam inventore neque. Delectus nam magni",
+            "imageUrl": "3.jpg",
+            "isPopular": 0
+        },
+        {
+            "id": 4,
+            "title": "4. Film",
+            "description": "consectetur adipisicing elit. Molestiae aliquam",
+            "imageUrl": "4.jpg",
+            "isPopular": 0
+        },
+        {
+            "id": 5,
+            "title": "5. Film",
+            "description": "sit amet consectetur adipisicing",
+            "imageUrl": "5.jpg",
+            "isPopular": 1
+        }
+    ],
+    "categories": [
+        {
+            "id": 1,
+            "name": "Macera"
+        },
+        {
+            "id": 2,
+            "name": "Romantik"
+        },
+        {
+            "id": 3,
+            "name": "Bilim Kurgu"
+        },
+        {
+            "id": 4,
+            "name": "Komedi"
+        },
+        {
+            "id": 5,
+            "name": "Dram"
+        },
+        {
+            "id": 6,
+            "name": "Animasyon"
+        },
+        {
+            "id": 7,
+            "name": "Savaş"
+        }
+    ]
+}

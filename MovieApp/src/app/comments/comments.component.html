@@ -1,0 +1,15 @@
+<main class="container">
+    <div class="my-3 p-3 bg-body rounded shadow-sm">
+        <h6 class="border-bottom pb-2 mb-0">Comments</h6>
+        <div class="d-flex text-muted pt-3" *ngFor="let comment of comments">
+            <div style="width: 32px; height: 32px;" class="bg-success rounded me-1"></div>
+            <p class="pb-3 mb-0 small lh-sm border-bottom">
+                <strong class="d-block text-gray-dark">@{{comment.name}} - {{comment.email}}</strong>
+                {{comment.body}}
+            </p>
+        </div>
+        <small class="d-block text-end mt-3">
+            <a href="#">Hepsini Göster</a>
+        </small>
+    </div>
+</main>
