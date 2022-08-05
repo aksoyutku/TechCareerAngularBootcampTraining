@@ -3,8 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
+import { AppRotingModule } from './app-roting.module';
 import { HttpClientModule } from '@angular/common/http';
-
+/* Components  */
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { CategoryComponent } from './category/category.component';
@@ -38,7 +39,8 @@ import { CommentsComponent } from './comments/comments.component';
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
     /* Toastr End */
-    HttpClientModule 
+    HttpClientModule,
+    AppRotingModule
   ],
   providers: [ToastrNameService, ToasterServiceMethods], /* services */
   bootstrap: [AppComponent]

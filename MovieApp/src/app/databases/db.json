@@ -1,69 +1,167 @@
 {
-    "movies": [
-        {
-            "id": 1,
-            "title": "1. Film",
-            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae aliquam inventore neque. Delectus nam magni, fuga iste quo ipsam. Accusantium impedit eos at fuga quaerat quasi cum esse sit blanditiis.",
-            "imageUrl": "1.jpg",
-            "isPopular": 0
-        },
-        {
-            "id": 2,
-            "title": "2. Film",
-            "description": "fuga quaerat quasi cum esse sit blanditiis.",
-            "imageUrl": "2.jpg",
-            "isPopular": 1
-        },
-        {
-            "id": 3,
-            "title": "3. Film",
-            "description": "Molestiae aliquam inventore neque. Delectus nam magni",
-            "imageUrl": "3.jpg",
-            "isPopular": 0
-        },
-        {
-            "id": 4,
-            "title": "4. Film",
-            "description": "consectetur adipisicing elit. Molestiae aliquam",
-            "imageUrl": "4.jpg",
-            "isPopular": 0
-        },
-        {
-            "id": 5,
-            "title": "5. Film",
-            "description": "sit amet consectetur adipisicing",
-            "imageUrl": "5.jpg",
-            "isPopular": 1
-        }
-    ],
-    "categories": [
-        {
-            "id": 1,
-            "name": "Macera"
-        },
-        {
-            "id": 2,
-            "name": "Romantik"
-        },
-        {
-            "id": 3,
-            "name": "Bilim Kurgu"
-        },
-        {
-            "id": 4,
-            "name": "Komedi"
-        },
-        {
-            "id": 5,
-            "name": "Dram"
-        },
-        {
-            "id": 6,
-            "name": "Animasyon"
-        },
-        {
-            "id": 7,
-            "name": "Savaş"
-        }
-    ]
+  "movies": [
+    {
+      "title": "2-2. Film",
+      "description": "Lorem ipsum ",
+      "imageUrl": "1.jpg",
+      "isPopular": 0,
+      "categoryId": 7,
+      "id": 2
+    },
+    {
+      "title": "3-5. Film",
+      "description": "Lorem ipsum ",
+      "imageUrl": "4.jpg",
+      "categoryId": 1,
+      "id": 3
+    },
+    {
+      "id": 4,
+      "title": "4. Film",
+      "description": "consectetur adipisicing elit. Molestiae aliquam",
+      "imageUrl": "4.jpg",
+      "isPopular": 0,
+      "categoryId": 3
+    },
+    {
+      "id": 5,
+      "title": "5. Film",
+      "description": "sit amet consectetur adipisicing",
+      "imageUrl": "5.jpg",
+      "isPopular": 1,
+      "categoryId": 4
+    },
+    {
+      "id": 6,
+      "title": "6. Film",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae aliquam inventore neque. Delectus nam magni, fuga iste quo ipsam. Accusantium impedit eos at fuga quaerat quasi cum esse sit blanditiis.",
+      "imageUrl": "1.jpg",
+      "isPopular": 0,
+      "categoryId": 5
+    },
+    {
+      "id": 7,
+      "title": "7. Film",
+      "description": "fuga quaerat quasi cum esse sit blanditiis.",
+      "imageUrl": "2.jpg",
+      "isPopular": 1,
+      "categoryId": 6
+    },
+    {
+      "id": 8,
+      "title": "8. Film",
+      "description": "Molestiae aliquam inventore neque. Delectus nam magni",
+      "imageUrl": "3.jpg",
+      "isPopular": 0,
+      "categoryId": 7
+    },
+    {
+      "title": "9. Film",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae aliquam inventore neque. Delectus nam magni, fuga iste quo ipsam. Accusantium impedit eos at fuga quaerat quasi cum esse sit blanditiis.",
+      "imageUrl": "1.jpg",
+      "isPopular": 0,
+      "categoryId": 7,
+      "id": 9
+    },
+    {
+      "title": "10. Film",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae aliquam inventore neque. Delectus nam magni, fuga iste quo ipsam. Accusantium impedit eos at fuga quaerat quasi cum esse sit blanditiis.",
+      "imageUrl": "4.jpg",
+      "categoryId": 6,
+      "id": 10
+    },
+    {
+      "title": "10. Film",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae aliquam inventore neque. Delectus nam magni, fuga iste quo ipsam. Accusantium impedit eos at fuga quaerat quasi cum esse sit blanditiis.",
+      "imageUrl": "4.jpg",
+      "categoryId": 6,
+      "id": 11
+    },
+    {
+      "title": "10. Film",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae aliquam inventore neque. Delectus nam magni, fuga iste quo ipsam. Accusantium impedit eos at fuga quaerat quasi cum esse sit blanditiis.",
+      "imageUrl": "4.jpg",
+      "categoryId": 6,
+      "id": 12
+    },
+    {
+      "title": "10. Film",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae aliquam inventore neque. Delectus nam magni, fuga iste quo ipsam. Accusantium impedit eos at fuga quaerat quasi cum esse sit blanditiis.",
+      "imageUrl": "4.jpg",
+      "categoryId": 6,
+      "id": 13
+    },
+    {
+      "title": "10. Film",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae aliquam inventore neque. Delectus nam magni, fuga iste quo ipsam. Accusantium impedit eos at fuga quaerat quasi cum esse sit blanditiis.",
+      "imageUrl": "4.jpg",
+      "categoryId": 6,
+      "id": 14
+    },
+    {
+      "title": "10. Film",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae aliquam inventore neque. Delectus nam magni, fuga iste quo ipsam. Accusantium impedit eos at fuga quaerat quasi cum esse sit blanditiis.",
+      "imageUrl": "4.jpg",
+      "categoryId": 6,
+      "id": 15
+    },
+    {
+      "title": "10. Film",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae aliquam inventore neque. Delectus nam magni, fuga iste quo ipsam. Accusantium impedit eos at fuga quaerat quasi cum esse sit blanditiis.",
+      "imageUrl": "4.jpg",
+      "categoryId": 6,
+      "id": 16
+    },
+    {
+      "title": "10. Film",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae aliquam inventore neque. Delectus nam magni, fuga iste quo ipsam. Accusantium impedit eos at fuga quaerat quasi cum esse sit blanditiis.",
+      "imageUrl": "4.jpg",
+      "categoryId": 6,
+      "id": 17
+    },
+    {
+      "title": "10. Film",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae aliquam inventore neque. Delectus nam magni, fuga iste quo ipsam. Accusantium impedit eos at fuga quaerat quasi cum esse sit blanditiis.",
+      "imageUrl": "4.jpg",
+      "categoryId": 6,
+      "id": 18
+    },
+    {
+      "title": "10. Film",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae aliquam inventore neque. Delectus nam magni, fuga iste quo ipsam. Accusantium impedit eos at fuga quaerat quasi cum esse sit blanditiis.",
+      "imageUrl": "4.jpg",
+      "categoryId": 6,
+      "id": 19
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Macera"
+    },
+    {
+      "id": 2,
+      "name": "Romantik"
+    },
+    {
+      "id": 3,
+      "name": "Bilim Kurgu"
+    },
+    {
+      "id": 4,
+      "name": "Komedi"
+    },
+    {
+      "id": 5,
+      "name": "Dram"
+    },
+    {
+      "id": 6,
+      "name": "Animasyon"
+    },
+    {
+      "id": 7,
+      "name": "Savaş"
+    }
+  ]
 }

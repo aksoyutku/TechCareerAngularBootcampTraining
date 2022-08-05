@@ -4,14 +4,14 @@
        class="list-group-item  list-group-item-action">
        {{category}}
     </a> -->
-    <a href="#" 
+    <a routerLink="/movies" 
        class="list-group-item  list-group-item-action"
        (click)="selectCategory()"
        [class.active]="displayAll">
        Tüm Kategoriler
     </a>
-    <a *ngFor="let category of categories"
-       href="#" 
+    <a routerLink="movies/category/{{category.id}}"
+       *ngFor="let category of categories"
        class="list-group-item  list-group-item-action" 
        [ngClass]="{'active': !displayAll && selectedCategory.id == category.id}" 
        (click)="selectCategory(category)">

@@ -7,5 +7,5 @@ export class MovieRepository {
 
     getMovies(): IMovie[] { return this.movies; }
     getMovieById(id: number): IMovie { return this.movies.find(i => i.id == id); }
-    getPopularMovies(): IMovie[] { return this.movies.filter(i => i.isPopular); }
+    /* getPopularMovies(): IMovie[] { return this.movies.filter(i => i.isPopular); } */
 }

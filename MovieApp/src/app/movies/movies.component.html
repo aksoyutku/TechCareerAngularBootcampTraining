@@ -11,7 +11,18 @@
         {{item.title}}
     </li>
 </ul> -->
-<h1>{{title}}</h1>
+<div class="row">
+    <div class="col-3"><h1>{{title}}</h1></div>
+    <div class="col-3">
+        <button class="btn btn-success" (click)="addMovie()">Movies Add</button>
+    </div>
+    <div class="col-3">
+        <button class="btn btn-danger" (click)="deleteMovie()">Movies Delete</button>
+    </div>
+    <div class="col-3">
+        <button class="btn btn-warning" (click)="updateMovie()">Movies Update</button>
+    </div>
+</div>
 <!-- <div class="alert alert-warning" *ngIf="movies.length == 15">
     {{movies.length}} film bulundu.
 </div> -->
@@ -22,6 +33,7 @@
 <!-- <div class="alert " [ngClass]="{'alert-success': movies.length > 0, 'alert-danger': movies.length == 0}">
     {{movies.length}} 
 </div> -->
+<div class="alert alert-danger" *ngIf="err">{{err}}</div>
 <div *ngIf="movies.length > 0;else templateName">
     <!-- <div class="alert alert-success">{{filterMovies.length}} film bulundu.</div> -->
     <div class="alert alert-success">{{movies.length}} film bulundu.</div>
@@ -49,8 +61,8 @@
                 <div class="col-md-8">
                     <div class="card-body">
                         <h5 class="card-title">{{item.title}}</h5>
-                        <p class="card-text">{{item.description | summary}} - {{item.datePublished}} </p>
-                        <p class="card-text"><small class="text-muted">{{item.datePublished | date}}</small></p>
+                        <!-- <p class="card-text">{{item.description | summary}} - {{item.datePublished}} </p>
+                        <p class="card-text"><small class="text-muted">{{item.datePublished | date}}</small></p> -->
                         <div>
                             <button class="btn btn-sm btn-outline-success me-2">Detaylar</button>
                             <button class="btn btn-sm btn-success" (click)="addToList($event, item)">Listeye
