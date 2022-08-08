@@ -1,4 +1,4 @@
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { catchError, Observable, tap, throwError } from 'rxjs';
 import { IMovie } from '../Models/IMovie';
@@ -27,6 +27,21 @@ export class MovieService {
       tap(data => console.log("Movies Service: ", data)),
       catchError(this.handleError)
     );
+  }
+
+  /* Observable Design Patter */
+  getMovieById(movieId: number): Observable<IMovie> {
+    return this.http.get<IMovie>(this.url + "/" + movieId);
+  }
+
+  createMovie(movie: IMovie, token?: string): Observable<IMovie> {
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Authorization': 'Token'
+      })
+    }
+    return this.http.post<IMovie>(this.url, movie, httpOptions);
   }
 
   /*

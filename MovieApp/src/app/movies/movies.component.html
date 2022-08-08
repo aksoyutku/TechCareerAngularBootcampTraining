@@ -12,15 +12,8 @@
     </li>
 </ul> -->
 <div class="row">
-    <div class="col-3"><h1>{{title}}</h1></div>
-    <div class="col-3">
-        <button class="btn btn-success" (click)="addMovie()">Movies Add</button>
-    </div>
-    <div class="col-3">
-        <button class="btn btn-danger" (click)="deleteMovie()">Movies Delete</button>
-    </div>
-    <div class="col-3">
-        <button class="btn btn-warning" (click)="updateMovie()">Movies Update</button>
+    <div class="col-12">
+        <h1>{{title}}</h1>
     </div>
 </div>
 <!-- <div class="alert alert-warning" *ngIf="movies.length == 15">
@@ -42,6 +35,9 @@
             (ngModelChange)="onInputChange()">
         <span class="text-muted" *ngIf="filterText"> Aradığınız kelime : {{filterText}}</span>
     </div>
+    <div style="text-align: end; margin-bottom: 2px">
+        <button routerLink="/movie/create" class="btn btn-sm btn-success me-1"><i class="fa-solid fa-plus"></i></button>
+    </div>
     <!-- <ng-template [ngTemplateOutlet]="movieList"></ng-template> -->
     <!-- <ng-template [ngTemplateOutlet]="movieList2" [ngTemplateOutletContext]="{teachCareer: popularMovies}">
     </ng-template> -->
@@ -50,8 +46,8 @@
     <div class="alert alert-danger">Film bulunamadı.</div>
 </ng-template>
 <!-- <div class="col-6" *ngFor="let item of movies | movieFilter : filterText"> -->
-    <!-- <div class="col-6" *ngFor="let item of filterMovies"> -->
-<div class="row">    
+<!-- <div class="col-6" *ngFor="let item of filterMovies"> -->
+<div class="row">
     <div class="col-6" *ngFor="let item of movies">
         <div class="card mb-3">
             <div class="row g-0">
@@ -61,12 +57,18 @@
                 <div class="col-md-8">
                     <div class="card-body">
                         <h5 class="card-title">{{item.title}}</h5>
-                        <!-- <p class="card-text">{{item.description | summary}} - {{item.datePublished}} </p>
-                        <p class="card-text"><small class="text-muted">{{item.datePublished | date}}</small></p> -->
-                        <div>
-                            <button class="btn btn-sm btn-outline-success me-2">Detaylar</button>
-                            <button class="btn btn-sm btn-success" (click)="addToList($event, item)">Listeye
-                                Ekle</button>
+                        <p class="card-text">{{item.description | summary}}</p>
+                        <!-- <p class="card-text"><small class="text-muted">{{item.datePublished | date}}</small></p> -->
+                        <div style="bottom: 5px; position: absolute; right: 5px;">
+                            <button routerLink="/movies/{{item.id}}" class="btn btn-sm btn-outline-primary me-2"
+                                title="Detay"><i class="fa-solid fa-circle-info"></i></button>
+                            <button class="btn btn-sm btn-danger me-1"><i class="fa-solid fa-circle-minus"></i></button>
+                            <button class="btn btn-sm btn-warning me-1"><i
+                                    class="fa-solid fa-pen-to-square"></i></button>
+                            <!-- <i class="fa-solid fa-cart-plus"></i> 
+                                 <i class="fa-solid fa-cart-circle-xmark"></i>    
+                            -->
+                            <button class="btn btn-sm btn-success" (click)="addToList($event, item)">LE</button>
                         </div>
                     </div>
                 </div>

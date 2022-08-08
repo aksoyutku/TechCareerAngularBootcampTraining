@@ -1,0 +1,48 @@
+<h1>Create Movie</h1>
+<!-- <form>
+    <div class="mb-3">
+        <label for="title" class="form-labe">Title</label>
+        <input #title type="text" name="" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label for="description" class="form-labe">Description</label>
+        <textarea #description class="form-control"></textarea>
+    </div>
+    <div class="mb-3">
+        <label for="imageUrl" class="form-labe">ImageUrl</label>
+        <input #imageUrl type="text" name="" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label for="categoryId" class="form-labe">CategoryId</label>
+        <select #categoryId name="" class="form-select">
+            <option value="-1">Kategori Seçiniz</option>
+            <option value="{{category.id}}" *ngFor="let category of categoies">{{category.name}}</option>
+        </select>
+    </div>
+    <button class="btn btn-success w-100" (click)="createMovie(title ,description ,imageUrl ,categoryId)">Add Movie</button>
+</form> -->
+<form #form="ngForm" (ngSubmit)="createMovie(form)">
+    <div class="mb-3">
+        <label for="title" class="form-label">Title</label>
+        <input required minlength="5"
+               [(ngModel)]="model.title" type="text" name="title" class="form-control" #title="ngModel" 
+               (change)="log(title)">
+    </div>
+    <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <textarea required minlength="10" maxlength="50"
+                  [(ngModel)]="model.description" name="description" class="form-control"></textarea>
+    </div>
+    <div class="mb-3">
+        <label for="imageUrl" class="form-label">ImageUrl</label>
+        <input [(ngModel)]="model.imageUrl" type="text" name="imageUrl" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label for="categoryId" class="form-label">CategoryId</label>
+        <select [(ngModel)]="model.categoryId" name="categoryId" class="form-select">
+            <option value="">Kategori Seçiniz</option>
+            <option value="{{category.id}}" *ngFor="let category of categoies">{{category.name}}</option>
+        </select>
+    </div>
+    <button [disabled]="form.invalid" class="btn btn-success w-100">Add Movie</button>
+</form>

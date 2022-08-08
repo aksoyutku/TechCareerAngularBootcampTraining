@@ -105,12 +105,12 @@ export class MoviesComponent implements OnInit {
       this.toastrService.success(movie.title + " listeye eklendi", "Listeye Eklenen")
       $event.target.classList.remove("btn-success");
       $event.target.classList.add("btn-danger");
-      $event.target.textContent = "Listeden Çıkar";
+      $event.target.textContent = "LÇ";
     } else {
       this.toastrService.warning(movie.title + " listeden çıkarıldı.")
       $event.target.classList.remove("btn-danger");
       $event.target.classList.add("btn-success");
-      $event.target.innerText = "Listeye Ekle";
+      $event.target.innerText = "LE";
     }
   }
 
@@ -123,13 +123,13 @@ export class MoviesComponent implements OnInit {
       "categoryId": 7
      */
 
-    this.addMovieModel = {
-      "title": "10. Film",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae aliquam inventore neque. Delectus nam magni, fuga iste quo ipsam. Accusantium impedit eos at fuga quaerat quasi cum esse sit blanditiis.",
-      "imageUrl": "4.jpg",
-      "categoryId": 6
-    }
-    this.movieService.postMovie(this.addMovieModel).subscribe(data => console.log(data));
+    // this.addMovieModel = {
+    //   "title": "10. Film",
+    //   "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae aliquam inventore neque. Delectus nam magni, fuga iste quo ipsam. Accusantium impedit eos at fuga quaerat quasi cum esse sit blanditiis.",
+    //   "imageUrl": "4.jpg",
+    //   "categoryId": 6
+    // }
+    // this.movieService.postMovie(this.addMovieModel).subscribe(data => console.log(data));
   }
 
   deleteMovie() {
@@ -139,13 +139,13 @@ export class MoviesComponent implements OnInit {
   }
 
   updateMovie() {
-    this.movieService.updateMovie(3, {
-      "title": "3-5. Film",
-      "description": "Lorem ipsum ",
-      "imageUrl": "4.jpg",
-      "categoryId": 1
-    }).subscribe(() => {
-      this.toastrService.success("Güncellendi", "Movie Updated");
-    })
+    // this.movieService.updateMovie(3, {
+    //   "title": "3-5. Film",
+    //   "description": "Lorem ipsum ",
+    //   "imageUrl": "4.jpg",
+    //   "categoryId": 1
+    // }).subscribe(() => {
+    //   this.toastrService.success("Güncellendi", "Movie Updated");
+    // })
   }
 }
